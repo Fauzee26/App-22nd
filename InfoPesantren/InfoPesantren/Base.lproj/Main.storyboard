@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aI4-KT-Mkf">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="BradleyHand-Bold.ttf">
+            <string>BradleyHandITCTT-Bold</string>
+        </array>
+        <array key="Didot.ttc">
+            <string>Didot-Bold</string>
+        </array>
+        <array key="Kefa.ttf">
+            <string>Kefa-Regular</string>
+        </array>
+        <array key="Noteworthy.ttc">
+            <string>Noteworthy-Light</string>
+        </array>
+        <array key="Papyrus.ttc">
+            <string>Papyrus</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Pesantren Table View Controller-->
+        <scene sceneID="HIK-Zs-d9Y">
+            <objects>
+                <tableViewController id="TQE-QY-m1D" customClass="PesantrenTableViewController" customModule="InfoPesantren" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xpb-zI-ABX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellPondok" rowHeight="54" id="myt-qg-BAF" customClass="PesantrenTableViewCell" customModule="InfoPesantren" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="54"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="myt-qg-BAF" id="NTJ-mv-ILQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="53.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nama_pondok" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2t-U8-Kqo">
+                                            <rect key="frame" x="8" y="8" width="359" height="38"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="359" id="Wp9-aM-B5r"/>
+                                                <constraint firstAttribute="height" constant="38" id="gcq-EU-ccC"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="X2t-U8-Kqo" firstAttribute="top" secondItem="NTJ-mv-ILQ" secondAttribute="top" constant="8" id="8Fy-8s-IXW"/>
+                                        <constraint firstAttribute="trailing" secondItem="X2t-U8-Kqo" secondAttribute="trailing" constant="8" id="KDR-fX-0Xu"/>
+                                        <constraint firstItem="X2t-U8-Kqo" firstAttribute="leading" secondItem="NTJ-mv-ILQ" secondAttribute="leading" constant="8" id="feP-rG-Yb3"/>
+                                        <constraint firstAttribute="bottom" secondItem="X2t-U8-Kqo" secondAttribute="bottom" constant="7.5" id="za7-ME-azA"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="lblNama" destination="X2t-U8-Kqo" id="qeu-at-XO7"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="TQE-QY-m1D" id="Ujd-6Y-RUk"/>
+                            <outlet property="delegate" destination="TQE-QY-m1D" id="O1f-RS-swK"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="YJx-Ml-tvn"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="modal" identifier="passPondok" id="VH4-sl-ZlI"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sgp-68-nUx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-234.40000000000001" y="73.313343328335833"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="InfoPesantren" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Zk-x2-9og">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Detail Pondok" id="e0L-2g-mFX">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="kTx-0r-6md">
+                                            <connections>
+                                                <segue destination="aI4-KT-Mkf" kind="modal" id="HPo-T5-KCm"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="nama_Pondok" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U98-Jf-ed6">
+                                <rect key="frame" x="16" y="81" width="343" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="alamat" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STN-lE-jfd">
+                                <rect key="frame" x="16" y="131" width="343" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="noTelp" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQ4-DK-SUn">
+                                <rect key="frame" x="16" y="259" width="343" height="111"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="website" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGI-pk-WrS">
+                                <rect key="frame" x="16" y="404" width="343" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="labelAlamat" destination="STN-lE-jfd" id="Bny-kv-oQh"/>
+                        <outlet property="labelNama" destination="U98-Jf-ed6" id="i3j-yY-No9"/>
+                        <outlet property="labelTelp" destination="cQ4-DK-SUn" id="1qA-eK-dYS"/>
+                        <outlet property="labelWebsite" destination="pGI-pk-WrS" id="wsS-fq-BuU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="452" y="72.413793103448285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oTj-5h-Rja">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aI4-KT-Mkf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3TJ-H1-10F">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TQE-QY-m1D" kind="relationship" relationship="rootViewController" id="szg-6j-laq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QYO-rb-Th6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-916" y="73"/>
+        </scene>
+    </scenes>
+</document>
