@@ -12,6 +12,9 @@
         <array key="BradleyHand-Bold.ttf">
             <string>BradleyHandITCTT-Bold</string>
         </array>
+        <array key="Courier.ttc">
+            <string>Courier-Bold</string>
+        </array>
         <array key="Didot.ttc">
             <string>Didot-Bold</string>
         </array>
@@ -24,9 +27,12 @@
         <array key="Papyrus.ttc">
             <string>Papyrus</string>
         </array>
+        <array key="TimesNewRomanBold.ttf">
+            <string>TimesNewRomanPS-BoldMT</string>
+        </array>
     </customFonts>
     <scenes>
-        <!--Pesantren Table View Controller-->
+        <!--Daftar Ma'had Salaf-->
         <scene sceneID="HIK-Zs-d9Y">
             <objects>
                 <tableViewController id="TQE-QY-m1D" customClass="PesantrenTableViewController" customModule="InfoPesantren" customModuleProvider="target" sceneMemberID="viewController">
@@ -35,17 +41,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellPondok" rowHeight="54" id="myt-qg-BAF" customClass="PesantrenTableViewCell" customModule="InfoPesantren" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="54"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellPondok" rowHeight="69" id="myt-qg-BAF" customClass="PesantrenTableViewCell" customModule="InfoPesantren" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="69"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="myt-qg-BAF" id="NTJ-mv-ILQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="53.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="68.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nama_pondok" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2t-U8-Kqo">
-                                            <rect key="frame" x="8" y="8" width="359" height="38"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="masjid" translatesAutoresizingMaskIntoConstraints="NO" id="PL0-L0-bTQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="359" id="Wp9-aM-B5r"/>
+                                                <constraint firstAttribute="height" constant="69" id="3DK-8O-lOx"/>
+                                                <constraint firstAttribute="width" constant="375" id="8g8-bb-a9w"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nama_pondok" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2t-U8-Kqo">
+                                            <rect key="frame" x="8" y="15" width="359" height="38"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="359" id="Wp9-aM-B5r"/>
                                                 <constraint firstAttribute="height" constant="38" id="gcq-EU-ccC"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="17"/>
@@ -54,10 +67,13 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="X2t-U8-Kqo" firstAttribute="top" secondItem="NTJ-mv-ILQ" secondAttribute="top" constant="8" id="8Fy-8s-IXW"/>
+                                        <constraint firstItem="PL0-L0-bTQ" firstAttribute="top" secondItem="NTJ-mv-ILQ" secondAttribute="top" id="3d5-ES-Me5"/>
+                                        <constraint firstItem="X2t-U8-Kqo" firstAttribute="top" secondItem="NTJ-mv-ILQ" secondAttribute="top" constant="15" id="8Fy-8s-IXW"/>
+                                        <constraint firstAttribute="trailing" secondItem="PL0-L0-bTQ" secondAttribute="trailing" id="Izu-cN-aKx"/>
                                         <constraint firstAttribute="trailing" secondItem="X2t-U8-Kqo" secondAttribute="trailing" constant="8" id="KDR-fX-0Xu"/>
+                                        <constraint firstItem="PL0-L0-bTQ" firstAttribute="leading" secondItem="NTJ-mv-ILQ" secondAttribute="leading" id="Zcd-Zl-cFj"/>
                                         <constraint firstItem="X2t-U8-Kqo" firstAttribute="leading" secondItem="NTJ-mv-ILQ" secondAttribute="leading" constant="8" id="feP-rG-Yb3"/>
-                                        <constraint firstAttribute="bottom" secondItem="X2t-U8-Kqo" secondAttribute="bottom" constant="7.5" id="za7-ME-azA"/>
+                                        <constraint firstAttribute="bottom" secondItem="PL0-L0-bTQ" secondAttribute="bottom" id="vRr-vE-v8c"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -70,7 +86,14 @@
                             <outlet property="delegate" destination="TQE-QY-m1D" id="O1f-RS-swK"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="YJx-Ml-tvn"/>
+                    <navigationItem key="navigationItem" title="Daftar Ma'had Salaf" id="YJx-Ml-tvn">
+                        <barButtonItem key="rightBarButtonItem" title="About" id="TaP-KD-nmD">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="VQX-hZ-idf" kind="modal" id="SVw-HZ-yWK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="modal" identifier="passPondok" id="VH4-sl-ZlI"/>
                     </connections>
@@ -78,6 +101,100 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sgp-68-nUx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-234.40000000000001" y="73.313343328335833"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="44i-GE-ThH">
+            <objects>
+                <viewController id="VQX-hZ-idf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hZn-t8-fzo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ABOUT APP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWn-IF-yK6">
+                                <rect key="frame" x="82" y="40" width="210" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="37"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1iK-nQ-qhE">
+                                <rect key="frame" x="71" y="24" width="81" height="5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZJ-OK-f1e">
+                                <rect key="frame" x="69" y="24" width="5" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOT-Ud-RzB">
+                                <rect key="frame" x="235" y="81" width="81" height="5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHQ-Bd-0eQ">
+                                <rect key="frame" x="311" y="55" width="5" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Info Pesantren" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNl-6M-nQ5">
+                                <rect key="frame" x="89" y="320" width="197" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="boarding" translatesAutoresizingMaskIntoConstraints="NO" id="fl4-qP-ntm">
+                                <rect key="frame" x="55" y="129" width="264" height="146"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Version 1.1 (2017)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMe-tl-F5U">
+                                <rect key="frame" x="59" y="384" width="256" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBO-YS-aT3">
+                                <rect key="frame" x="35" y="444" width="304" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">© 2017 Fauzee Corp.
+Originally Developed by Hilmy Fauzi</string>
+                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P1B-C5-81q">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Main Menu" id="6td-oG-kkG">
+                                        <connections>
+                                            <segue destination="aI4-KT-Mkf" kind="modal" id="IO1-DQ-n4N"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="gPB-Kb-lJl"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jrt-yo-d2E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-170.40000000000001" y="813.64317841079469"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -95,6 +212,11 @@
                                         <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="kTx-0r-6md">
                                             <connections>
                                                 <segue destination="aI4-KT-Mkf" kind="modal" id="HPo-T5-KCm"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="About" id="w6i-nb-4Wj">
+                                            <connections>
+                                                <segue destination="VQX-hZ-idf" kind="modal" id="LpN-cO-fXT"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -148,7 +270,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aI4-KT-Mkf" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3TJ-H1-10F">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="3TJ-H1-10F">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -162,4 +284,12 @@
             <point key="canvasLocation" x="-916" y="73"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="boarding" width="512" height="512"/>
+        <image name="masjid" width="236" height="236"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="IO1-DQ-n4N"/>
+        <segue reference="LpN-cO-fXT"/>
+    </inferredMetricsTieBreakers>
 </document>

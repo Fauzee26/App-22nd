@@ -54,6 +54,7 @@
 		A04888E51FCA6EE8008E08A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0E1FA641FD10D83003C4563 /* PesantrenTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PesantrenTableViewController.swift; sourceTree = "<group>"; };
 		A0E1FA671FD10ED6003C4563 /* PesantrenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PesantrenTableViewCell.swift; sourceTree = "<group>"; };
+		A0F943151FD8E85E00768C83 /* forTest.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = forTest.jpg; sourceTree = "<group>"; };
 		F7B14B8B038ED43765346C22 /* Pods_InfoPesantren.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InfoPesantren.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -120,6 +121,7 @@
 				A04888C51FCA6EE8008E08A1 /* ViewController.swift */,
 				A0E1FA641FD10D83003C4563 /* PesantrenTableViewController.swift */,
 				A0E1FA671FD10ED6003C4563 /* PesantrenTableViewCell.swift */,
+				A0F943151FD8E85E00768C83 /* forTest.jpg */,
 				A04888C71FCA6EE8008E08A1 /* Main.storyboard */,
 				A04888CA1FCA6EE8008E08A1 /* Assets.xcassets */,
 				A04888CC1FCA6EE8008E08A1 /* LaunchScreen.storyboard */,
